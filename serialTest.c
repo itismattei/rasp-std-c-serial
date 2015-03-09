@@ -167,7 +167,7 @@ int serialDataAvail (const int fd)
  * serialGetchar:
  *      Get a single character from the serial device.
  *      Note: Zero is a valid character and this function will time-out after
- *      10 seconds.
+ *      5 seconds.
  *********************************************************************************
  */
 
@@ -195,13 +195,8 @@ int main ()
     return 1 ;
   }
 
-/*  if (wiringPiSetup () == -1)
-  {
-    fprintf (stdout, "Unable to start wiringPi: %s\n", strerror (errno)) ;
-    return 1 ;
-  }*/
 
-// Get and modify current options:
+// ciclo infinito, dve trasmette i caratteri 
 
   while(1){
   nextTime = millis () + 300 ;
