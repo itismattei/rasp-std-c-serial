@@ -1,0 +1,4 @@
+syntax: glob
+Makefile~
+ser
+*.c~
